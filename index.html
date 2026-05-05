@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header / Hero */
+        header {
+            background: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            background: var(--white);
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Resume Section */
+        .resume-block {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* Research Section */
+        .paper-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Multimedia / YouTube Grid */
+        .video-grid, .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 2rem;
+        }
+
+        /* Game CSS */
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        #gameCanvas {
+            max-width: 100%;
+            height: auto;
+            background: #fdfdfd;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#game">Game</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="about">
+        <div class="container">
+            <h1>Vidhesh Shukla</h1>
+            <p>Project Geologist | Geotechnical Geologist | Environmental Specialist</p>
+            <br>
+            <p style="max-width: 600px; margin: auto;">
+                Welcome to my personal portfolio. I specialize in environmental geology and subsurface consulting with a focus on contaminant investigation, groundwater analysis, and data-driven site characterization.
+                Below you will find my academic research, professional history, and creative media projects.
+            </p>
+        </div>
+    </header>
+
+    <section id="resume">
+        <div class="container">
+            <h2>Experience & Resume</h2>
+
+            <div class="resume-block">
+                <h3>Staff Geologist II</h3>
+                <small>United Consulting | March 2024 - Present</small>
+                <ul>
+  <li>Led subsurface investigations across 7 states managing ~$1.5M in project value; achieved 100% regulatory acceptance and zero compliance violations across all project phases.</li>
+  <li>Designed PFAS/PFOS sampling strategies, geotechnical investigations, asbestos surveys, and radon testing at 15+ sites; expanded firm service offerings into high-growth technical sectors.</li>
+  <li>Developed potentiometric surface maps and integrated analytical data to assess groundwater flow direction and contaminant migration, directly informing remediation strategies and site closure decisions.</li>
+  <li>Executed complex 3D site models utilizing 200+ soil borings and 75+ monitoring wells across diverse geological provinces (Coastal Plain, Piedmont, Appalachian).</li>
+  <li>Authored technical reports, work plans, and remedial investigation documents with minimal agency revisions — zero requests for additional information (RAI) on managed submittals.</li>
+</ul>
+            </div>
+
+            <div class="resume-block">
+                <h3>Project Manager</h3>
+                <small>Kansas Dept. of Health & Environment (KDHE)| Mar 2023 – Mar 2024</small>
+              <ul>
+  <li>Evaluated 52 subsurface projects with ~$18M combined liability; optimized investigation designs for maximum data ROI and 100% statutory compliance.</li>
+  <li>Managed QA/QC for 500+ annual analytical datasets; identified data gaps that prevented $2M+ in unnecessary operational expenditures.</li>
+  <li>Developed and reviewed RBCA risk-based closure proposals; negotiated remedial strategies with responsible parties and legal counsel for complex multi-party sites.</li>
+  <li>Authored scopes of work, RFPs, and technical specifications for field investigation contractors across VCP and Brownfields programs.</li>
+  <li>Led community engagement for high-profile sites with 200+ affected residents, translating complex technical findings into accessible public communications.</li>
+</ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="resume.pdf" class="btn" target="_blank">Download Full Resume (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <div class="container">
+            <h2>Academic Research</h2>
+            <div class="paper-card">
+                <h3>Extent and glacial history of the Cordilleran Ice Sheet in northwest Montana: Using OSL to date glacial sediments from the southeastern Flathead Lobe</h3>
+                <p><strong>Abstract:</strong> This thesis investigates glacial sediments in the Flathead Valley, Polson, Montana that were deposited during the last glacial period (~115,000 – 11,700 years ago). Research objectives were to reconstruct the glacial history and timing of the furthest southeasterly extent of the Cordilleran Ice Sheet (CIS) at the Flathead Lobe in northwestern Montana and to assess the viability of luminescence dating of sediments in glacial environments..</p>
+                <a href="https://krex.k-state.edu/items/8cf64430-c853-4cce-a766-b349cc3bc249" style="color: var(--accent-color); font-weight: bold;">Read Full Paper &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="media">
+        <div class="container">
+            <h2>YouTube Projects</h2>
+            <div class="video-grid">
+                <iframe src="https://www.youtube.com/embed/O9rzu8d0J7Y?si=Gkqbp0Gw0l-xJ0w0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/4N3aD5PkG9w?start=5" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+            </div>
+
+            <br><br>
+
+            <h2>Image Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://via.placeholder.com/400x300" alt="Project Image 1">
+                <img src="https://via.placeholder.com/400x300" alt="Project Image 2">
+                <img src="https://via.placeholder.com/400x300" alt="Project Image 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="game">
+        <div class="container">
+            <h2>Take a Break & Play</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Press Spacebar or Tap to jump over the red blocks!</p>
+            <div class="game-container">
+                <canvas id="gameCanvas" width="800" height="200"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>
+            <a href="#" style="color: white; margin: 0 10px;">LinkedIn</a> |
+            <a href="#" style="color: white; margin: 0 10px;">Email</a>
+        </p>
+    </footer>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69f1523129768c1c3577a952/1jnbai4dc';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+<script src="game.js"></script>
+</body>
+</html>
